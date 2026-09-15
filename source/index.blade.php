@@ -1417,10 +1417,10 @@ width: full
                             <label for="hp-home">HP</label>
                             <input type="text" name="hp" id="hp-home" tabindex="-1" autocomplete="off">
                         </div>
-                        <button type="submit" class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-grey-900 shadow-sm hover:bg-grey-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" data-umami-event="newsletter-submit" data-umami-event-source="newsletter-form-home">Notify
+                        <button type="submit" class="flex-none cursor-pointer rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-grey-900 shadow-sm hover:bg-grey-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" data-umami-event="newsletter-submit" data-umami-event-source="newsletter-form-home">Notify
                             me</button>
                     </div>
-                    <div class="cf-turnstile" data-sitekey="{{ $page->turnstileNewsletterSiteKey }}" data-action="newsletter" data-theme="dark"></div>
+                    <div class="cf-turnstile" data-sitekey="{{ $page->turnstileNewsletterSiteKey }}" data-action="newsletter" data-theme="dark" data-size="flexible" data-appearance="interaction-only"></div>
                 </form>
             </div>
 
