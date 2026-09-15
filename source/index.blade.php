@@ -1409,19 +1409,18 @@ width: full
                 <h2 class="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">Product
                     news and updates</h2>
                 <p class="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-grey-100">Occasional emails - no spam. Unsubscribe any time.</p>
-                <form action="https://news.addy.io/subscribe" method="POST" accept-charset="utf-8" class="mx-auto mt-10 flex max-w-md gap-x-4">
-                    <label for="email-address" class="sr-only">Email address</label>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6" placeholder="Enter your email">
-                    <div class="hidden">
-                        <label for="hp">HP</label>
-                        <input type="text" name="hp" id="hp" />
+                <form action="{{ $page->appUrl }}/newsletter/subscribe" method="POST" accept-charset="utf-8" class="mx-auto mt-10 flex max-w-md flex-col items-center gap-y-4">
+                    <div class="flex w-full gap-x-4">
+                        <label for="email-address" class="sr-only">Email address</label>
+                        <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6" placeholder="Enter your email">
+                        <div class="hidden" aria-hidden="true">
+                            <label for="hp-home">HP</label>
+                            <input type="text" name="hp" id="hp-home" tabindex="-1" autocomplete="off">
+                        </div>
+                        <button type="submit" class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-grey-900 shadow-sm hover:bg-grey-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" data-umami-event="newsletter-submit" data-umami-event-source="newsletter-form-home">Notify
+                            me</button>
                     </div>
-                    <input type="hidden" name="list" value="JYLgy1unb31YYX3AW892Fxvg" />
-                    <input type="hidden" name="subform" value="yes" />
-                    <label for="gdpr" class="hidden">GDPR</label>
-                    <input class="hidden" type="checkbox" name="gdpr" id="gdpr" checked />
-                    <button type="submit" class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-grey-900 shadow-sm hover:bg-grey-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" data-umami-event="newsletter-submit" data-umami-event-source="newsletter-form-home">Notify
-                        me</button>
+                    <div class="cf-turnstile" data-sitekey="{{ $page->turnstileNewsletterSiteKey }}" data-action="newsletter" data-theme="dark"></div>
                 </form>
             </div>
 
@@ -1432,6 +1431,7 @@ width: full
 @stop
 
 @push('scripts')
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 <script type="module" src="{{ $page->vite('source/_assets/js/hero-animation.js') }}"></script>
 <script>
     fetch("{{ $page->appUrl }}/default-currency").then((e => e.json())).then((e => {

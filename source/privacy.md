@@ -10,7 +10,7 @@ description: This policy (together with our Terms and Conditions) sets out the b
   <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
 </div>
 
-<p class="text-sm text-grey-400 mb-4">Last Updated: 4th September 2024</p>
+<p class="text-sm text-grey-400 mb-4">Last Updated: 15th September 2026</p>
 
 This policy (together with our Terms and Conditions) sets out the basis on which any personal data we collect from you, or that you provide to us, will be processed by us. It applies to addy.io and any subdomains e.g. app.addy.io.
 
@@ -67,7 +67,7 @@ You have the right to require us to correct any inaccuracies in your data, free 
 
 We use [Stripe](https://stripe.com) and [NOWPayments](https://nowpayments.io/) to process payments for subscriptions. Any payment transactions will be carried out by Stripe and NOWPayments over encrypted connections. Your card information never touches our server. If you are subscribed to our newsletter then we will also use [Amazon Simple Email Service (SES)](https://aws.amazon.com/ses/) to deliver email campaigns.
 
-We also use [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/), a privacy friendly captcha solution on our login, register and reset password pages to protect against bots and abuse.
+We also use [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/), a privacy friendly captcha solution on our login, register, reset password and newsletter sign-up pages to protect against bots and abuse.
 
 ## Changes To Our Privacy Policy
 

@@ -5,6 +5,7 @@ use Illuminate\Support\Str;
 return [
     'baseUrl' => 'http://localhost:3000/',
     'appUrl' => 'https://app.addy.io',
+    'turnstileNewsletterSiteKey' => '1x00000000000000000000AA',
     'production' => false,
     'siteName' => 'addy.io',
     'siteDescription' => 'Create unlimited email aliases for free. Protect your real email from spam by using a different address for each service. Privacy friendly, anonymous replies.',
